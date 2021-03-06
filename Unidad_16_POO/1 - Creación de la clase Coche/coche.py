@@ -48,6 +48,9 @@ class Coche:
         if not self.w_estado:
             # Se cambia el valor del estado del coche a encendido.
             self.w_estado = True
+            print('Se ha arrancado el coche.')
+        else:
+            print('El coche ya estaba arrancado.')
 
     # Se crea el método de instancia "apagar" para cambiar el estado del coche a apagado.
     def apagar(self):
@@ -56,6 +59,9 @@ class Coche:
         if self.w_estado:
             # Se cambia el valor del estado del coche a apagado.
             self.w_estado = False
+            print('Se ha apagado el coche.')
+        else:
+            print('El coche ya estaba apagado.')
 
     # Se crea el método de instancia "acelerar" para indicar por pantalla que el coche está acelerando.
     def acelerar(self):
@@ -63,7 +69,9 @@ class Coche:
         # Para que el coche pueda acelerar, debe de estar encendido y por ello se comprueba si el coche esta encendido.
         if self.w_estado:
             # Se muestra un mensaje por pantalla.
-            print('El coche ha acelerado')
+            print('El coche ha acelerado.')
+        else:
+            print('El coche no se puede acelerar ya que está apagado.')
 
     # Se crea el método de instancia "frenar" para indicar por pantalla que el coche está frenando.
     def frenar(self):
@@ -71,22 +79,6 @@ class Coche:
         # Para que el coche pueda frenar, debe de estar encendido y por ello se comprueba si el coche esta encendido.
         if self.w_estado:
             # Se muestra un mensaje por pantalla.
-            print('El coche ha frenado')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            print('El coche ha frenado.')
+        else:
+            print('El coche no se puede frenar ya que está apagado.')
