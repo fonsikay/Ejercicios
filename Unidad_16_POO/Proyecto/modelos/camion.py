@@ -47,8 +47,8 @@ class Camion(Coche):
 
     # Se define el método privado "pro_cargar_mercancia" de la clase "Camión".
     def pro_cargar_mercancia(self):
-        pass
+        print("La mercancia se está cargando...")
 
     # Se define el método privado "pro_descargar_mercancia" de la clase "Camión".
     def pro_descargar_mercancia(self):
-        pass
+        print("La mercancia se está descargando...")

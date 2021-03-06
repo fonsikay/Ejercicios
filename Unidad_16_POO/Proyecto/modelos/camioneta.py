@@ -47,8 +47,8 @@ class Camioneta(Coche):
 
     # Se crea el método privado "pro_cargar_material()" de la subclase Camioneta.
     def pro_cargar_material(self):
-        pass
+        print("El material se está cargando...")
 
     # Se crea el método privado "pro_descargar_material()" de la subclase Camioneta.
     def pro_descargar_material(self):
-        pass
+        print("El material se está descargando...")

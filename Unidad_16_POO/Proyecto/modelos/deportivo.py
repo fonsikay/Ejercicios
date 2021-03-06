@@ -25,6 +25,7 @@ Datos de la clase a crear.
     - Métodos privados de la clase Deportivo:
 
         - pro_abrir_puertas().
+        - pro_cerrar_puertas().
 """
 
 # Se importa la clase principal Coche.
@@ -46,4 +47,8 @@ class Deportivo(Coche):
 
     # Se crea el método privado "pro_abrir_puertas()" de la subclase Deportivo.
     def pro_abrir_puertas(self):
-        pass
+        print("El deportivo esta abriendo las puertas...")
+
+    # Se crea el método privado "pro_cerrar_puertas()" de la subclase Deportivo.
+    def pro_cerrar_puertas(self):
+        print("El deportivo esta cerrando las puertas...")

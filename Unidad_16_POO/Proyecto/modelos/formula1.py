@@ -26,7 +26,6 @@ Datos de la clase a crear.
         - pro_competir().
 """
 
-
 # Se importa la clase principal Coche.
 from coche import Coche
 
@@ -45,4 +44,4 @@ class Formula1(Coche):
 
     # Se crea el método privado "pro_competir()" de la subclase Formula 1.
     def pro_competir(self):
-        pass
+        print("El Formula 1 está compitiendo...")
