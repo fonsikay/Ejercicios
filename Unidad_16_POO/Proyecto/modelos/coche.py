@@ -1,22 +1,26 @@
-'''
+"""
 Datos de la clase a crear.
 
-  - Nombre Clase: Coche
+    - Nombre Clase: Coche
 
-  - Atributos públicos que van a heredar las subclases:
+    - Atributos públicos que van a heredar las subclases:
 
-    + Matricula.
-    + Marca.
-    + Modelo.
-    + País procedencia.
+        + Matricula.
+        + Marca.
+        + Modelo.
+        + País procedencia.
 
-  - Métodos públicos que van a heredad las subclases:
+    - Atributo privado de la clase Coche:
 
-    + pro_encender().
-    + pro_apagar().
-    + pro_acelerar().
-    + pro_frenar().
-  '''
+        - Estado.
+
+    - Métodos públicos que van a heredad las subclases:
+
+        + pro_encender().
+        + pro_apagar().
+        + pro_acelerar().
+        + pro_frenar().
+"""
 
 
 # Creación de la clase Coche.
@@ -36,7 +40,7 @@ class Coche:
 
         # Se crea una variable de instancia que no se indica como atributo propio de la clase "Coche" sino que sirve
         # para que su valor se pueda utilizar en toda la clase y en todos sus métodos.
-        self.w_estado = False
+        self.a_estado = False
 
     # Se crea los métodos de instancia que va a tener la clase "Coche.
 
@@ -45,9 +49,9 @@ class Coche:
     def pro_encender(self):
 
         # Para que el coche pueda encenderse, debe de estar apagado y por ello se comprueba si el coche esta apagado.
-        if not self.w_estado:
+        if not self.a_estado:
             # Se cambia el valor del estado del coche a encendido.
-            self.w_estado = True
+            self.a_estado = True
             print('Se ha arrancado el coche.')
         else:
             print('El coche ya estaba arrancado.')
@@ -56,9 +60,9 @@ class Coche:
     def pro_apagar(self):
 
         # Para que el coche pueda apagarse, debe de estar encendido y por ello se comprueba si el coche esta encendido.
-        if self.w_estado:
+        if self.a_estado:
             # Se cambia el valor del estado del coche a apagado.
-            self.w_estado = False
+            self.a_estado = False
             print('Se ha apagado el coche.')
         else:
             print('El coche ya estaba apagado.')
@@ -67,7 +71,7 @@ class Coche:
     def pro_acelerar(self):
 
         # Para que el coche pueda acelerar, debe de estar encendido y por ello se comprueba si el coche esta encendido.
-        if self.w_estado:
+        if self.a_estado:
             # Se muestra un mensaje por pantalla.
             print('El coche ha acelerado.')
         else:
@@ -77,7 +81,7 @@ class Coche:
     def pro_frenar(self):
 
         # Para que el coche pueda frenar, debe de estar encendido y por ello se comprueba si el coche esta encendido.
-        if self.w_estado:
+        if self.a_estado:
             # Se muestra un mensaje por pantalla.
             print('El coche ha frenado.')
         else:

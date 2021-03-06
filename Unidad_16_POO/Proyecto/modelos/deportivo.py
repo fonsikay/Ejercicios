@@ -1,4 +1,4 @@
-'''
+"""
 Datos de la clase a crear.
 
     - Nombre Clase: Deportivo
@@ -25,7 +25,7 @@ Datos de la clase a crear.
     - Métodos privados de la clase Deportivo:
 
         - pro_abrir_puertas().
-'''
+"""
 
 # Se importa la clase principal Coche.
 from coche import Coche

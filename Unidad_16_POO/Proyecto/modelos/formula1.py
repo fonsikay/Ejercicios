@@ -1,4 +1,4 @@
-'''
+"""
 Datos de la clase a crear.
 
     - Nombre Clase: Formula1
@@ -24,7 +24,7 @@ Datos de la clase a crear.
     - Métodos privados de la clase Formula1:
 
         - pro_competir().
-'''
+"""
 
 
 # Se importa la clase principal Coche.

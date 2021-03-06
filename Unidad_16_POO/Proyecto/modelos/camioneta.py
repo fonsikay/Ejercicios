@@ -1,4 +1,4 @@
-'''
+"""
 Datos de la clase a crear.
 
     - Nombre Clase: Camioneta
@@ -26,7 +26,7 @@ Datos de la clase a crear.
 
         - pro_cargar_material().
         - pro_descargar_material().
-'''
+"""
 
 # Se importa la clase principal Coche.
 from coche import Coche
@@ -52,9 +52,3 @@ class Camioneta(Coche):
     # Se crea el método privado "pro_descargar_material()" de la subclase Camioneta.
     def pro_descargar_material(self):
         pass
-
-
-
-
-
-
