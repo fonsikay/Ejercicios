@@ -5,7 +5,7 @@ from modelos.coche import Coche
 
 
 # Se crea un método para iniciar la creación de los objetos necesarios.
-def main():
+def app_principal():
     
     # Se crea un objeto de la clase Coche para el coche Seat Ibiza
     w_seat_ibiza = Coche('8676FNR', 'Seat', 'Ibiza', 'España')
@@ -21,9 +21,27 @@ def main():
     print('- Marca: {}'.format(w_seat_ibiza.pe_marca))
     print('- Modelo: {}'.format(w_seat_ibiza.pe_modelo))
     print('- País de procedencia: {}'.format(w_seat_ibiza.pe_pais_procedencia))
-    print('- Estado: {}'.format(w_seat_ibiza.w_estado))
+    # Se indica que si el valor es True, indique un 'Si' y si el valor es False, pues que indique 'No'.
+    print('- ¿Está encendido el coche?: {}'.format('Si' if w_seat_ibiza.w_estado else 'No'))
+
+    # Se llama a los métodos de la clase "Coche" para cambiar el valor del atributo "estado".
+
+    print('\nSe lanzan los métodos de instancia.\n')
+    w_seat_ibiza.apagar()
+    w_seat_ibiza.encender()
+    print('¿Está encendido el coche?: {}'.format('Si' if w_seat_ibiza.w_estado else 'No'))
+    w_seat_ibiza.apagar()
+    print('¿Está encendido el coche?: {}'.format('Si' if w_seat_ibiza.w_estado else 'No'))
+    w_seat_ibiza.acelerar()
+    w_seat_ibiza.encender()
+    w_seat_ibiza.acelerar()
+    w_seat_ibiza.frenar()
+    w_seat_ibiza.frenar()
+    w_seat_ibiza.encender()
+    w_seat_ibiza.apagar()
+    print('¿Está encendido el coche?: {}'.format('Si' if w_seat_ibiza.w_estado else 'No'))
 
 
 # Se ejecuta el método principal de la aplicación.
 if __name__ == '__main__':
-    main()
+    app_principal()
