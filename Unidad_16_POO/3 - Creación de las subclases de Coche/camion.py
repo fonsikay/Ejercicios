@@ -1,4 +1,4 @@
-'''
+"""
 Datos de la clase a crear.
 
     - Nombre Clase: Camión
@@ -25,7 +25,7 @@ Datos de la clase a crear.
 
         - pro_cargar_mercancia().
         - pro_descargar_mercancia().
-'''
+"""
 
 # Se importa la clase principal Coche.
 from coche import Coche
@@ -52,16 +52,3 @@ class Camion(Coche):
     # Se define el método privado "pro_descargar_mercancia" de la clase "Camión".
     def pro_descargar_mercancia(self):
         pass
-
-
-
-
-
-
-
-
-
-
-
-
-
