@@ -2,32 +2,33 @@
 Datos de la clase a crear.
 
     - Nombre Clase: Formula1
-
-    - Atributos públicos heredados de la superclase Coche:
+    - Tipo: Subclase de Coche
+    - Atributos heredados de la superclase Coche:
 
         + Matricula.
         + Marca.
         + Modelo.
         + País procedencia.
 
-    - Atributos privados de la clase Formula1:
+    - Atributos propios de la clase Formula1:
 
         - Peso
 
-    - Métodos públicos heredados de la superclase Coche:
+    - Métodos heredados de la superclase Coche:
 
         + pro_encender().
         + pro_apagar().
         + pro_acelerar().
         + pro_frenar().
 
-    - Métodos privados de la clase Formula1:
+    - Métodos propios de la clase Formula1:
 
         - pro_competir().
 """
 
-# Se importa la clase principal Coche.
-from coche import Coche
+# Se importa la clase principal Coche indicando con el "." que en la carpeta actual se busque el script donde se
+# encuentre el archivo "coche.py" ya que si no se indica, nos da error de que no encuentra la clase Coche.
+from . coche import Coche
 
 
 # Se crea la clase Camioneta siendo subclase de la clase Coche.

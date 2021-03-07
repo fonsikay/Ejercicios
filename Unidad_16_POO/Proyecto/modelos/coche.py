@@ -2,19 +2,16 @@
 Datos de la clase a crear.
 
     - Nombre Clase: Coche
-
-    - Atributos públicos que van a heredar las subclases:
+    - Tipo: Super clase
+    - Atributos propios que van a heredar las subclases:
 
         + Matricula.
         + Marca.
         + Modelo.
         + País procedencia.
+        + Estado.
 
-    - Atributo privado de la clase Coche:
-
-        - Estado.
-
-    - Métodos públicos que van a heredad las subclases:
+    - Métodos propios que van a heredad las subclases:
 
         + pro_encender().
         + pro_apagar().

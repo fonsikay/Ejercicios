@@ -2,33 +2,34 @@
 Datos de la clase a crear.
 
     - Nombre Clase: Camión
-
-    - Atributos públicos heredados de la superclase Coche:
+    - Tipo: Subclase de Coche
+    - Atributos heredados de la superclase Coche:
 
         + Matricula.
         + Marca.
         + Modelo.
         + País procedencia.
 
-    - Atributos privados de la clase Camión:
+    - Atributos propios de la clase Camión:
 
         - Capacidad carga.
 
-    - Métodos públicos heredados de la superclase Coche:
+    - Métodos heredados de la superclase Coche:
 
         + pro_encender().
         + pro_apagar().
         + pro_acelerar().
         + pro_frenar().
 
-    - Métodos privados de la clase Camión:
+    - Métodos propios de la clase Camión:
 
         - pro_cargar_mercancia().
         - pro_descargar_mercancia().
 """
 
-# Se importa la clase principal Coche.
-from coche import Coche
+# Se importa la clase principal Coche indicando con el "." que en la carpeta actual se busque el script donde se
+# encuentre el archivo "coche.py" ya que si no se indica, nos da error de que no encuentra la clase Coche.
+from . coche import Coche
 
 
 # Se crea la clase "Camión" que es una subclase de la clase "Coche" por lo que va a heredar los atributos y métodos
