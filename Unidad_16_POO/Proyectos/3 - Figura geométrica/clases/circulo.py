@@ -14,7 +14,7 @@ Datos de la clase a crear.
 
         - Radio.
 
-    - Métodos heredados de la superclase Figura:
+    - Métodos abstractos heredados de la superclase Figura:
 
         + pro_dibujar().
         + pro_area().
