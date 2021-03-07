@@ -28,7 +28,7 @@ Datos de la clase a crear.
 
 # Se importa la clase principal Coche indicando con el "." que en la carpeta actual se busque el script donde se
 # encuentre el archivo "coche.py" ya que si no se indica, nos da error de que no encuentra la clase Coche.
-from . coche import Coche
+from .coche import Coche
 
 
 # Se crea la clase Camioneta siendo subclase de la clase Coche.

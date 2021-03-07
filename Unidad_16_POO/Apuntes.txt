@@ -1,0 +1,356 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| INFORMACIÓN DEL CURSO PYTHON 																																													                                  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Curso: Python - Curso Versión 2
+Autor: John Ortiz Ordoñez
+Lista de reproducción Youtube: https://www.youtube.com/playlist?list=PL2PZw96yQChwQjUsXbDMtKmAgqj6jV-do
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| UNIDAD 16 - Programación Orientada a Objetos (Videos 328 - 386) 																											                                  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| CREACION DE DIAGRAMAS DE CLASES
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	- Para la creación de un diagrama UML de clases se utiliza la siguiente web:
+
+	https://lucid.app/lucidchart/f4e98db5-772d-4155-becf-6a954c5983ee/edit?page=rk6hH5KLjpEE#
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| 1 - CREACION DE UNA CLASE O SUPER CLASE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	- Para crear una clase, hay que realizar varias acciones:
+
+		1 - Crear un archivo ".py" con el nombre de la clase.
+		2 - Dentro del archivo creado, se indica el comando "class" y el nombre de la clase, la primera letra en mayúscula.
+
+				Ej: Se crea una clase llamada "Coche".
+
+						class Coche:
+
+		3 - Dentro de la clase creada, se crea el método constructor inicializador de la clase "__init__(self)" indicando los atributos que va a tener dicha 
+				clase.
+
+				def __init__(self, "nombre_atributo1", "nombre_atributo2", "nombre_atributo3", ..., "nombre_atributoN"):
+
+				Ej: Se crea una clase llamada "Coche" que va a tener los siguientes atributos: matricula, marca, modelo, pais_procedencia.
+
+						class Coche:
+
+								def __init__(self, matricula, marca, modelo, pais_procedencia):
+
+		4 - Dentro del método constructor inicializador de la clase "__init__()", se crean las variables de instancia utilizando el comando "self" para hacer
+				referencia que dicha variable depende de la clase donde se ha creado y es en ella donde se almacenan los atributos cargados en el método 
+				constructor de inicialización de la clase.
+
+				self."nombre_atributo1" = "nombre_atributo1"
+				self."nombre_atributo2" = "nombre_atributo2"
+				self."nombre_atributo3" = "nombre_atributo3"
+				...
+				self."nombre_atributoN" = "nombre_atributoN"
+
+				Ej: Se crea la clase "Coche()" que tiene los atributos "matricula, marca, modelo, pais_procedencia".
+
+						class Coche:
+
+								def __init__(self, matricula, marca, modelo, pais_procedencia):
+
+										self.a_matricula = matricula
+						        self.a_marca = marca
+						        self.a_modelo = modelo
+						        self.a_pais_procedencia = pais_procedencia
+
+		5 - Creación de los métodos de instancia de la clase. 
+
+				def "nombre_metodo"(self):
+
+				Ej: Se crea la clase "Coche()" que tiene los atributos "matricula, marca, modelo, pais_procedencia" y tiene 4 métodos de instancia llamados 
+						"pro_encender(), pro_apagar(), pro_acelerar() y pro_frenar()".
+
+						class Coche:
+
+								def __init__(self, matricula, marca, modelo, pais_procedencia):
+
+										self.a_matricula = matricula
+						        self.a_marca = marca
+						        self.a_modelo = modelo
+						        self.a_pais_procedencia = pais_procedencia
+
+						    def pro_encender(self):
+						    		pass
+
+						    def pro_apagar(self):
+						    		pass						    
+
+						    def pro_acelerar(self):
+						    		pass
+
+						    def pro_frenar(self):
+						    		pass
+
+			5.1 - Si el método de instancia a crear en una clase quiere que sea un método abstracto para que puedan utilizarlo otras subclases, se debe de importar la 
+						clase "abstractmethod" de la librería "abc" y luego indicar en la línea justo superior de la definición del método de tipo abstracto el comando
+						"@abstractmethod" para indicar que dicho método es de tipo abstracto.
+						En este tipo de métodos, solo se debe de indicar el nombre del método y como código el comando "pass" ya que la funcionalidad de éste método abstracto
+						se debe de definir como un nuevo método en cada una de las subclases que la vaya a utilizar.
+
+						from abc import abstractmethod
+
+						@abstractmethod
+						def "nombre_método_abstracto"(self):
+								pass
+
+						Ej: Se crea la clase "Coche()" que tiene los atributos "matricula, marca, modelo, pais_procedencia" y tiene 4 métodos de instancia llamados 
+						"pro_encender(), pro_apagar(), pro_acelerar() y pro_frenar()" y un método abstracto llamado "pro_conducir()".
+
+						from abc import abstractmethod
+						class Coche:
+
+								def __init__(self, matricula, marca, modelo, pais_procedencia):
+
+										self.a_matricula = matricula
+						        self.a_marca = marca
+						        self.a_modelo = modelo
+						        self.a_pais_procedencia = pais_procedencia
+
+						    def pro_encender(self):
+						    		pass
+
+						    def pro_apagar(self):
+						    		pass						    
+
+						    def pro_acelerar(self):
+						    		pass
+
+						    def pro_frenar(self):
+						    		pass
+
+						    @abstractmethod
+						    def pro_conducir(self):
+						        pass
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| 2 - CREACION DE UNA SUBCLASE DE UNA SUPER CLASE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	- Para crear una subclase, hay que realizar varias acciones:
+
+		1 - Crear un archivo ".py" con el nombre de la clase.
+		2 - Dentro del archivo creado, se indica el comando "class" y el nombre de la clase, la primera letra en mayúscula junto al nombre de la superclase
+				entre paréntesis. Antes se debe de importar el archivo ".py" de la superclase a heredar
+
+				from . "nombre_archivo_py_superclase" import "nombre_superclase"
+				class "nombre_subclase"("nombre_superclase"):
+
+				Ej: Se crea una subclase "Camion" de la superclase "Coche".
+
+						from . coche import Coche
+						class Camion(Coche):
+
+		3 - Dentro de la clase creada, se crea el método constructor inicializador de la clase "__init__(self)" indicando los atributos propios de la 
+				superclase que va a heredar más los atributos propios de la subclase.
+
+				def __init__(self, "nombre_atributo_superclase1", "nombre_atributo_superclase2", ..., "nombre_atributo_subclase1", ...):
+
+				Ej: Se crea una subclase llamada "Camion" de la superclase "Coche" que recibe los atributos de la clase "Coche" como son: matricula, marca, 
+						modelo, pais_procedencia y luego se le añade el atributo propio "capacidad_carga".
+
+						from . coche import Coche
+						class Camion(Coche):
+
+								def __init__(self, matricula, marca, modelo, pais_procedencia, capacidad_carga):
+
+		4 - Dentro del método constructor inicializador de la clase "__init__()", se debe de hacer una llamada al método constructor inicializador de la superclase
+				padre con el método "super().__init__()" e indicar dentro del método "__init__" los atributos de dicha superclase que se van a heredar.
+
+				super().__init__(nombre_atributo_superclase1, nombre_atributo_superclase2, ..., nombre_atributo_superclaseN)
+
+				Una vez que se ha indicado los métodos de la superclase, pues se crean las variables de instancia de sólo los atributos que no sean heredados y
+				que sean propios de la subclase a crear.
+
+				self."nombre_atributo_subclase1" = "nombre_atributo_subclase1"
+				self."nombre_atributo_subclase2" = "nombre_atributo_subclase2"
+				...
+				self."nombre_atributo_subclaseN" = "nombre_atributo_subclaseN"
+
+				Ej: Se crea una subclase llamada "Camion" de la superclase "Coche", de la cual hereda los atributos "matricula, marca, modelo, pais_procedencia" y
+						que tiene como atributo propio "capacidad_carga".
+						
+						from . coche import Coche
+						class Camion(Coche):
+
+								def __init__(self, matricula, marca, modelo, pais_procedencia, capacidad_carga):
+
+										super().__init__(matricula, marca, modelo, pais_procedencia)
+										self.a_capacidad_carga = capacidad_carga
+
+		5 - Creación de los métodos de instancia propios de la subclase ya que los métodos de la superclase son heredados y no hay que volverlos a definir en dicha
+				subclase. 
+
+				def "nombre_método_subclase"(self):
+
+				Ej: Se crea una subclase llamada "Camion" de la superclase "Coche", de la cual hereda los atributos "matricula, marca, modelo, pais_procedencia" y
+						que tiene como atributo propio "capacidad_carga" y tiene "pro_cargar_mercancia()" y "pro_descargar_mercancia()" como métodos propios de la 
+						subclase.
+						
+						from . coche import Coche
+						class Camion(Coche):
+
+								def __init__(self, matricula, marca, modelo, pais_procedencia, capacidad_carga):
+
+										super().__init__(matricula, marca, modelo, pais_procedencia)
+										self.a_capacidad_carga = capacidad_carga
+
+								def pro_cargar_mercancia(self):
+										pass
+
+								def pro_descargar_mercancia(self):
+										pass
+
+			5.1 - Si el método de instancia a crear en una subclase quiere que sea un método abstracto para que puedan utilizarlo otras subclases, se debe de importar la 
+						clase "abstractmethod" de la librería "abc" y luego indicar en la línea justo superior de la definición del método de tipo abstracto el comando
+						"@abstractmethod" para indicar que dicho método es de tipo abstracto.
+						En este tipo de métodos, solo se debe de indicar el nombre del método y como código el comando "pass" ya que la funcionalidad de éste método abstracto
+						se debe de definir como un nuevo método en cada una de las subclases que la vaya a utilizar.
+
+						from abc import abstractmethod
+
+						@abstractmethod
+						def "nombre_método_abstracto"(self):
+								pass
+
+						Ej: Se crea una subclase llamada "Camion" de la superclase "Coche", de la cual hereda los atributos "matricula, marca, modelo, pais_procedencia" y
+						que tiene como atributo propio "capacidad_carga" y tiene "pro_cargar_mercancia()" y "pro_descargar_mercancia()" como métodos propios de la 
+						subclase y un método abstracto llamado "pro_conducir()".
+
+						from . coche import Coche
+						from abc import abstractmethod
+
+						class Camion(Coche):
+
+								def __init__(self, matricula, marca, modelo, pais_procedencia, capacidad_carga):
+
+										super().__init__(matricula, marca, modelo, pais_procedencia)
+										self.a_capacidad_carga = capacidad_carga
+
+								def pro_cargar_mercancia(self):
+										pass
+
+								def pro_descargar_mercancia(self):
+										pass
+
+						    @abstractmethod
+						    def pro_conducir(self):
+						        pass
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| 3 - CREACION DE UNA CLASE ABSTRACTA
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	- Para crear una clase abstracta, hay que realizar varias acciones:
+
+			1 - Crear un archivo ".py" con el nombre de la clase.
+			2 - Dentro del archivo creado, se debe de importar la clase "ABC" de la librería "abc"
+
+					from abc import ABC
+
+			3 - Se crea la clase indicando el comando "class" y el nombre de la clase, la primera letra en mayúscula pasándole entre paréntesis la clase abstracta
+					"ABC".
+
+					class "nombre_clase_abstracta"(ABC):
+
+					Ej: Se crea una clase abstracta llamada "Animal".
+
+							from abc import ABC
+							class Animal(ABC):
+
+			4 - Dentro de la clase abstracta creada, se crea el método constructor inicializador de la clase "__init__(self)" indicando los atributos que va a tener
+				  dicha clase.
+
+					def __init__(self, "nombre_atributo1", "nombre_atributo2", "nombre_atributo3", ..., "nombre_atributoN"):
+
+					Ej: Se crea una clase abstracta llamada "Animal" que va a tener los siguientes atributos: nombre, edad, nombre_cientifico.
+
+							from abc import ABC
+							class Animal(ABC):
+
+									def __init__(self, nombre, edad, nombre_cientifico):
+
+			5 - Dentro del método constructor inicializador de la clase abstracta "__init__()", se crean las variables de instancia utilizando el comando "self" para
+				 	hacer referencia que dicha variable depende de la clase donde se ha creado y es en ella donde se almacenan los atributos cargados en el método 
+					constructor de inicialización de la clase.
+
+					self."nombre_atributo1" = "nombre_atributo1"
+					self."nombre_atributo2" = "nombre_atributo2"
+					self."nombre_atributo3" = "nombre_atributo3"
+					...
+					self."nombre_atributoN" = "nombre_atributoN"
+
+					Ej: Se crea una clase abstracta llamada "Animal" que va a tener los siguientes atributos: nombre, edad, nombre_cientifico.
+
+							from abc import ABC
+							class Animal(ABC):
+
+									def __init__(self, nombre, edad, nombre_cientifico):
+
+							        self.a_nombre = nombre
+							        self.a_edad = edad
+							        self.a_nombre_cientifico = nombre_cientifico
+
+			6 - Creación de los métodos de instancia de la clase. 
+
+					def "nombre_metodo"(self):
+
+					Ej: Se crea una clase abstracta llamada "Animal" que va a tener los siguientes atributos "nombre, edad, nombre_cientifico" y tiene 2 métodos de instancia llamados 
+							"pro_comer() y pro_moverse().
+
+							from abc import ABC
+							class Animal(ABC):
+
+									def __init__(self, nombre, edad, nombre_cientifico):
+
+							        self.a_nombre = nombre
+							        self.a_edad = edad
+							        self.a_nombre_cientifico = nombre_cientifico
+
+							    def pro_comer(self):
+							    		pass
+
+							    def pro_moverse(self):
+							    		pass						    
+
+			5.1 - Si el método de instancia a crear en una clase abstracta quiere que sea un método abstracto para que puedan utilizarlo otras subclases, se debe de importar
+					  la clase "abstractmethod" de la librería "abc" y luego indicar en la línea justo superior de la definición del método de tipo abstracto el comando
+						"@abstractmethod" para indicar que dicho método es de tipo abstracto.
+						En este tipo de métodos, solo se debe de indicar el nombre del método y como código el comando "pass" ya que la funcionalidad de éste método abstracto
+						se debe de definir como un nuevo método en cada una de las subclases que la vaya a utilizar.
+
+						from abc import abstractmethod
+
+						@abstractmethod
+						def "nombre_método_abstracto"(self):
+								pass
+
+						Ej: Se crea una clase abstracta llamada "Animal" que va a tener los siguientes atributos "nombre, edad, nombre_cientifico" y tiene 2 métodos de instancia llamados 
+							"pro_comer() y pro_moverse() y un método abstracto llamado "pro_hablar()".
+
+							from abc import ABC, abstractmethod
+							class Animal(ABC):
+
+									def __init__(self, nombre, edad, nombre_cientifico):
+
+							        self.a_nombre = nombre
+							        self.a_edad = edad
+							        self.a_nombre_cientifico = nombre_cientifico
+
+							    def pro_comer(self):
+							    		pass
+
+							    def pro_moverse(self):
+							    		pass					
+
+							    @abstractmethod
+							    def pro_conducir(self):
+							        pass
+

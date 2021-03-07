@@ -1,15 +1,15 @@
 # Creación de objetos o instanciación.
 
 # Se importa la clase "Coche" creada en el archivo "coche.py".
-from modelos.coche import Coche
+from clases.coche import Coche
 # Se importa la clase "Camión" creada en el archivo "camion.py".
-from modelos.camion import Camion
+from clases.camion import Camion
 # Se importa la clase "Deportivo" creada en el archivo "deportivo.py".
-from modelos.deportivo import Deportivo
+from clases.deportivo import Deportivo
 # Se importa la clase "Camioneta" creada en el archivo "camioneta.py".
-from modelos.camioneta import Camioneta
+from clases.camioneta import Camioneta
 # Se importa la clase "Formula 1" creada en el archivo "formula1.py".
-from modelos.formula1 import Formula1
+from clases.formula1 import Formula1
 
 
 # Se crea un método para iniciar la creación de los objetos necesarios.
@@ -174,6 +174,32 @@ def app_principal():
     w_renault_f1.pro_frenar()
     w_renault_f1.pro_apagar()
     print('- ¿El Formula 1 está encendido?: {}'.format('Si' if w_renault_f1.a_estado else 'No'))
+
+    # Se pretende crear una lista de todos los objetos creados para que con un "for" se muestre toda la información de
+    # los atributos comunes de las subclases de la clase "Coche".
+
+    # Se crea una lista con todos los objetos creados de cada una de las clases utilizadas.
+    w_lista_coches = [w_seat_ibiza, w_camion_carga, w_ferrari, w_camioneta, w_renault_f1]
+
+    # Se recorre la lista y se imprime la información de cada uno de los coches creados y se lanzan los métodos
+    # indicados creados en la clase Coche.
+
+    print('\nToda la información común de los objetos creados son:')
+    for r_lista_coches in w_lista_coches:
+
+        print('\n ----------- DATOS DE LA CLASE {} -----------\n'.format(type(r_lista_coches).__name__).upper())
+
+        print('Los datos del {} son:\n'.format(type(r_lista_coches).__name__))
+        print('- Matrícula: {}'.format(r_lista_coches.a_matricula))
+        print('- Marca: {}'.format(r_lista_coches.a_marca))
+        print('- Modelo: {}'.format(r_lista_coches.a_modelo))
+        print('- Pais de procedencia: {}'.format(r_lista_coches.a_pais_procedencia))
+        print('- ¿El coche está encendido?: {}'.format('Si' if r_lista_coches.a_estado else 'No'))
+        r_lista_coches.pro_encender()
+        print('- ¿El coche está encendido?: {}'.format('Si' if r_lista_coches.a_estado else 'No'))
+        r_lista_coches.pro_acelerar()
+        r_lista_coches.pro_frenar()
+        r_lista_coches.pro_apagar()
 
 
 # Se ejecuta el método principal de la aplicación.
