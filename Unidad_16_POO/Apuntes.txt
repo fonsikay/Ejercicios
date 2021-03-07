@@ -324,7 +324,7 @@ Lista de reproducción Youtube: https://www.youtube.com/playlist?list=PL2PZw96yQ
 					  la clase "abstractmethod" de la librería "abc" y luego indicar en la línea justo superior de la definición del método de tipo abstracto el comando
 						"@abstractmethod" para indicar que dicho método es de tipo abstracto.
 						En este tipo de métodos, solo se debe de indicar el nombre del método y como código el comando "pass" ya que la funcionalidad de éste método abstracto
-						se debe de definir como un nuevo método en cada una de las subclases que la vaya a utilizar.
+						se debe de definir como un nuevo método llamado exactamente igual en todas las subclases que tengan a la superclase referenciada.
 
 						from abc import abstractmethod
 
