@@ -40,8 +40,11 @@ class Triangulo(Figura):
 
     # Se define el funcionamiento del método abstracto heredado "pro_dibujar()" de la superclase "Figura".
     def pro_dibujar(self):
-        pass
+        print('Se está dibujando el triángulo de {} de base y {} de altura.'.format(self.a_base, self.a_altura))
 
     # Se define el funcionamiento del método abstracto heredado "pro_area()" de la superclase "Figura".
     def pro_area(self):
-        pass
+
+        # Se calcula el area del triángulo (base por altura entre dos) y se retorna.
+        w_area = (self.a_base * self.a_altura) / 2
+        return w_area

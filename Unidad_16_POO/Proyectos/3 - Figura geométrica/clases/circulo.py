@@ -22,6 +22,7 @@ Datos de la clase a crear.
 
 # Se importa la superclase Figura del archivo "figura.py".
 from .figura import Figura
+from math import pi
 
 
 # Se crea la subclase "Circulo" de la superclase "Figura".
@@ -38,8 +39,11 @@ class Circulo(Figura):
 
     # Se define el funcionamiento del método abstracto heredado "pro_dibujar()" de la superclase "Figura".
     def pro_dibujar(self):
-        pass
+        print('Se está dibujando el círculo de {} de radio.'.format(self.a_radio))
 
     # Se define el funcionamiento del método abstracto heredado "pro_area()" de la superclase "Figura".
     def pro_area(self):
-        pass
+
+        # Se calcula el area de un circulo (pi por radio al cuadrado) y se retorna.
+        w_area = pi * (self.a_radio ** 2)
+        return w_area

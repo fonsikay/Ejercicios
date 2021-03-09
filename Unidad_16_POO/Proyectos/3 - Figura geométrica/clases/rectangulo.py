@@ -40,8 +40,11 @@ class Rectangulo(Figura):
 
     # Se define el funcionamiento del método abstracto heredado "pro_dibujar()" de la superclase "Figura".
     def pro_dibujar(self):
-        pass
+        print('Se está dibujando el rectángulo de {} de ancho por {} de alto.'.format(self.a_ancho, self.a_alto))
 
     # Se define el funcionamiento del método abstracto heredado "pro_area()" de la superclase "Figura".
     def pro_area(self):
-        pass
+
+        # Se calcula el area de un rectángulo (ancho por alto) y se retorna.
+        w_area = self.a_ancho * self.a_alto
+        return w_area
