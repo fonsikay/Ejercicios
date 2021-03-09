@@ -17,6 +17,15 @@ Lista de reproducción Youtube: https://www.youtube.com/playlist?list=PL2PZw96yQ
 	https://lucid.app/lucidchart/f4e98db5-772d-4155-becf-6a954c5983ee/edit?page=rk6hH5KLjpEE#
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+| ESTRUCTURA DE CARPETAS PARA UN PROYECTO PYTHON CON PROGRAMACIÓN ORIENTADA A OBJETOS
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	- Archivo "main.py": Archivo donde se crean los objetos de las clases y se ejecuta el código.
+	- Carpeta "clases": Se almacenan todas los archivos de las clases creadas.
+		- Archivo "__init__": Se crea un archivo vacío.
+		- Archivo "nombre_clase.py": Se crean las definiciones de las clases. 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 | 1 - CREACION DE UNA CLASE O SUPER CLASE
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
