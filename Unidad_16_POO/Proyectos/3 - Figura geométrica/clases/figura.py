@@ -15,6 +15,7 @@ Datos de la clase a crear.
 
         + Abstracto pro_dibujar().
         + Abstracto pro_area().
+        + pro__str__()
 """
 
 # Se importa la libreria "abc" para poder indicar la clase y los métodos como abstractos.

@@ -19,6 +19,7 @@ Datos de la clase a crear.
 
         + pro_dibujar().
         + pro_area().
+        + pro__str__().
 """
 
 # Se importa la superclase Figura del archivo "figura.py".

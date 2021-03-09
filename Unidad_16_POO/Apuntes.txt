@@ -354,3 +354,24 @@ Lista de reproducción Youtube: https://www.youtube.com/playlist?list=PL2PZw96yQ
 							    def pro_conducir(self):
 							        pass
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+| SOBREESCRITURA DE METODOS   																																													                                  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	- Se puede sobreescribir un método que tiene una superclase en las subclases y para ello sólo hay que crear un método con el nombre exactamente igual
+		que el método de la superclase y luego indicar la funcionalidad que va a tener según sea la subclase a donde se haya reescribido la funcionalidad.
+
+	- Para poder acceder a atributos o métodos de una superclase desde una subclase se utiliza el comando "super().".
+
+		Ej: Se quiere tener acceso al valor que tiene el atributo "a_color_fondo" y ejecutar el método de instancia "pro__str__()" de la superclase "Figura" desde su subclase "Rectángulo".
+
+			w_valor_atributo_superclase = super().a_color_fondo
+			super().pro__str__()
+
+
+
+
+
+
+
+
