@@ -40,3 +40,9 @@ class Figura(ABC):
     @abstractmethod
     def pro_area(self):
         pass
+
+    # Se crea el método "pro__str__()" para que se pueda imprimir por pantalla los datos de los dos atributos que tiene
+    # la clase figura.
+    def pro__str__(self):
+
+        return '- Color de fondo: {}. - Color de borde: {}.'.format(self.a_color_fondo, self.a_color_borde)

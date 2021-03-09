@@ -47,3 +47,9 @@ class Circulo(Figura):
         # Se calcula el area de un circulo (pi por radio al cuadrado) y se retorna.
         w_area = pi * (self.a_radio ** 2)
         return w_area
+
+    # Se crea el método "pro__str__()" para que se pueda imprimir por pantalla los datos de los dos atributos que tiene
+    # la clase figura y le añadimos los atributos propios de la clase Círculo.
+    # Se obtiene lo que tiene el método "pro__str__()" de la clase padre con el comando "super()".
+    def pro__str__(self):
+        return '{} - Radio: {}'.format(super(Circulo, self).pro__str__(), self.a_radio)

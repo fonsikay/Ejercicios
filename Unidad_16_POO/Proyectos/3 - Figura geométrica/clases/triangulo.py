@@ -48,3 +48,9 @@ class Triangulo(Figura):
         # Se calcula el area del triángulo (base por altura entre dos) y se retorna.
         w_area = (self.a_base * self.a_altura) / 2
         return w_area
+
+    # Se crea el método "pro__str__()" para que se pueda imprimir por pantalla los datos de los dos atributos que tiene
+    # la clase figura y le añadimos los atributos propios de la clase Triángulo.
+    # Se obtiene lo que tiene el método "pro__str__()" de la clase padre con el comando "super()".
+    def pro__str__(self):
+        return '{} - Base: {}. - Altura: {}'.format(super(Triangulo, self).pro__str__(), self.a_base, self.a_altura)

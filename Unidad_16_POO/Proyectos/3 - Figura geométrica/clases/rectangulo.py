@@ -48,3 +48,9 @@ class Rectangulo(Figura):
         # Se calcula el area de un rectángulo (ancho por alto) y se retorna.
         w_area = self.a_ancho * self.a_alto
         return w_area
+
+    # Se crea el método "pro__str__()" para que se pueda imprimir por pantalla los datos de los dos atributos que tiene
+    # la clase figura y le añadimos los atributos propios de la clase Rectangulo.
+    # Se obtiene lo que tiene el método "pro__str__()" de la clase padre con el comando "super()".
+    def pro__str__(self):
+        return '{} - Ancho: {}. - Alto: {}'.format(super().pro__str__(), self.a_ancho, self.a_alto)
